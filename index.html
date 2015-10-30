@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> CALCULATOR </title>
+
+		<style type="text/css">
+
+			body {
+				text-decoration: underline;
+				background-image: url("http://cdn26.us1.fansshare.com/photo/wallpaperbackground/backgrounds-html-160284745.jpg");
+				margin: auto;
+			}
+			input {
+			    width: auto;
+			    border: 2px solid navy;
+			    margin: auto; 
+			}
+			header {
+			    text-align: center;
+			    font-size: 50px;
+			}
+			form { 
+				position: center;
+				font-size: 200px;
+				float: ;
+				/*table-layout: auto;*/
+
+			}
+			footer { 
+				background-color:black;
+			    color:white;
+			    clear:both;
+			    text-align:center;
+			    padding:5px;
+			    border-bottom:black;
+
+			}
+			header {
+			    background-color:black;
+			    color:white;
+			    text-align:center;
+			    padding:5px;
+
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header> CALCULATOR</header>
+		<footer>
+
+		</footer>
+
+
+		<form>
+				<input id="firstNumber" type="number" name="firstInput">
+				<select id= "operation">
+					<option id="plusSign" value="p">+</option>
+					<option id="minusSign" value="s">-</option>
+					<option id="multiplySign" value="m">*</option>
+					<option id="divideSign" value="d">/</option>
+				</select>
+				<input id="secondNumber" type="number" name="secondInput">
+				<input id="submitButton" type="button" name="Value" value="Equal!" onClick="calculateNumbers()">
+				<input id="result" type="number" name="calculatedNum" value="">
+				
+			</form>
+		</header>
+
+		<script>
+			
+			var op = "";
+			function calculateNumbers()  {
+				op = document.getElementById("operation").value;
+			
+				if (op == "p")  {
+					resultingNumber = document.getElementById("firstNumber").value + document.getElementById("secondNumber").value;
+				}
+				else if (op == "s")  {
+					resultingNumber = document.getElementById("firstNumber").value - document.getElementById("secondNumber").value;
+				}
+				else if (op == "m")  {
+					resultingNumber = document.getElementById("firstNumber").value * document.getElementById("secondNumber").value;
+				}
+				else if (op == "d")  {
+					resultingNumber = document.getElementById("firstNumber").value / document.getElementById("secondNumber").value;
+				}
+				document.getElementById("result").value = resultingNumber;
+				return resultingNumber;
+				
+			}
+			function testButton()  {
+				var resultingNumber = document.getElementById("firstNumber").value * document.getElementById("secondNumber").value;
+				document.getElementById("result").value = resultingNumber;
+				return resultingNumber;
+			}
+
+
+		</script>
+
+	</body>
+
+
+</html>
